@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Its_SearchLog>
+      <version>1.0.0</version>
+    </Its_SearchLog>
+  </modules>
+  <global>
+		<helpers>
+			<searchlog>
+				<class>Its_SearchLog_Helper</class>
+			</searchlog>
+		</helpers>
+		<blocks>
+            <searchlog> 
+               
+                <class>Its_SearchLog_Block</class>
+            </searchlog>
+        </blocks>
+		<models>
+			<searchlog>
+				<class>Its_SearchLog_Model</class>
+					<resourceModel>searchlog_resource</resourceModel>
+			</searchlog>
+        <searchlog_resource>
+            <class>Its_SearchLog_Model_Resource</class>
+            <entities>
+                <content>
+                    <table>its_searchlog</table>
+                </content>
+            </entities>
+        </searchlog_resource>
+    </models>
+        <resources>
+            <searchlog_setup>
+                <setup>
+                    <module>Its_SearchLog</module>
+					<class>Its_SearchLog_Model_Resource_Setup</class>
+                </setup>
+ <connection>
+                    <use>core_setup</use>
+                </connection>
+				</searchlog_setup>	
+  <searchlog_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </searchlog_write>
+            <searchlog_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </searchlog_read> 
+			
+        </resources>
+	<events>
+		<catalogsearch_query_save_before>
+			<observers>
+				<its_searchlog_model_observer>
+					<type>singleton</type>
+					<class>Its_SearchLog_Model_Observer</class>
+					<method>send_search_details</method>
+				</its_searchlog_model_observer>
+			</observers>
+		</catalogsearch_query_save_before>
+	</events>	
+    
+	
+  </global>
+  
+	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <searchlog before="Mage_Adminhtml">Its_SearchLog_Adminhtml</searchlog>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin> 
+	<adminhtml>
+		<layout>
+            <updates>
+                <searchlog>
+                    <file>itssearchlog.xml</file>
+                </searchlog>
+            </updates>
+        </layout>
+	</adminhtml>
+</config> 

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <searchlog translate="title" module="searchlog">
+            <title>Search Results Log</title>
+            <sort_order>90</sort_order>
+                    <action>adminhtml/searchlog</action> 
+        </searchlog>
+    </menu>
+	<acl>
+        <resources>
+		<all>
+			<title>Allow Everything</title>
+		</all>
+            <admin>
+                <children>                
+                    <searchlog translate="title" module="searchlog">
+                        <title>Search Log</title>
+                        <sort_order>20</sort_order>
+                    </searchlog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+	
+		
+</config>

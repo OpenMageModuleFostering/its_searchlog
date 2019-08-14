@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+    <name>Its_SearchLog</name>
+    <version>1.4.0</version>
+    <stability>stable</stability>
+    <license>Open Software License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The Search Log extension records the search query, quantity of items found  and customer ID for logged in customers.</summary>
+    <description>This small module will record the following information when a logged in customer uses the search functionality in Magento:&#xD;
+User ID&#xD;
+Search Query&#xD;
+Items found per search&#xD;
+Date and Time of search&#xD;
+&#xD;
+Installation Instructions&#xD;
+1 &#x2013; Install the extension via Magento Connect.&#xD;
+2 &#x2013; Clear the cache&#xD;
+3 &#x2013; Log out of the admin area and log back in again.&#xD;
+</description>
+    <notes>N / A</notes>
+    <authors><author><name>Dominic Wetherall</name><user>dominic_wetherall</user><email>dominic_wetherall@itspecialists.uk.com</email></author></authors>
+    <date>2015-07-28</date>
+    <time>09:21:49</time>
+    <contents><target name="magecommunity"><dir name="Its"><dir name="SearchLog"><dir name="Block"><dir name="Adminhtml"><dir name="Usersearches"><file name="Grid.php" hash="d9aa321b04e1e34cc184437f347c13d9"/></dir><file name="Usersearches.php" hash="1285158b8d6e3846f93bfc4b63677887"/></dir></dir><dir name="Helper"><file name="Data.php" hash="974dfa29a3fe379d67738f2de92369ef"/></dir><dir name="Model"><file name="Content.php" hash="2da62bad70ddf4de113774c115be9e9a"/><file name="Observer.php" hash="79b560ac2bf3b8d4f0389042d86dabdd"/><dir name="Resource"><dir name="Content"><file name="Collection.php" hash="f59e4b8291f0f2d3fac634efac3964db"/></dir><file name="Content.php" hash="7f077e33127b58e2719b35a244568336"/><file name="Setup.php" hash="bcd973f8b3ff46d82e98d2c0b13a1808"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="SearchlogController.php" hash="da9193baad5400260ea986e37b41c7b0"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="bd8748b65a26e6a2fc2485a0e3733f00"/><file name="config.xml" hash="16a2ffd86f8b9c7052880c2ddf21fc6e"/></dir><dir name="sql"><dir name="searchlog_setup"><file name="mysql4-install-1.0.0.php" hash="5fadc2b99a9cd516e9df005e0e060dbc"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Its_SearchLog.xml" hash="4d96f3ec177cfc80630041df265a1460"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
