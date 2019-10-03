@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Its_SearchLog",
+    "name": "OpenMageModuleFostering\/Its_SearchLog",
     "type": "magento-module",
     "license": "Open-Software-License",
     "homepage": "",
     "description": "The Search Log extension records the search query, quantity of items found  and customer ID for logged in customers.",
     "authors": [
-    {
-        "name": "Dominic Wetherall",
-        "email": "dominic_wetherall@itspecialists.uk.com"
-    }
-],
+        {
+            "name": "Dominic Wetherall",
+            "email": "dominic_wetherall@itspecialists.uk.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
