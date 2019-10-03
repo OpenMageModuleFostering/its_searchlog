@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 The Search Log extension records the search query, quantity of items found  and customer ID for logged in customers.
